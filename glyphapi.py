@@ -148,7 +148,7 @@ def calculateEffectCountProbability():
         response = "You have a 50/50 chance of getting 2 or 3 effects." if ru17 else "You can only get two effects at this level."
         return { "status":  response }
     probabilityOfEffectCount = numpy.round(probabilityOfEffectCount * 100, 2)
-    return {"status": f"The probability of finding {'an Effarig' if isEffarig else 'a'} Glyph with the given rarity ({rarity}%) and the number of given effects ({numberOfEffects}) is {probabilityOfEffectCount}%."}
+    return {"status": f"The probability of finding {'an Effarig' if isEffarig else 'a'} Glyph (GL{level}) with the given rarity ({rarity}%) and the number of given effects ({numberOfEffects}) is {probabilityOfEffectCount}%."}
 
 def effectCountProbabilityModel(threshold, strength, level, effectCount, isEffarig):
         if effectCount <= 0: return 0
